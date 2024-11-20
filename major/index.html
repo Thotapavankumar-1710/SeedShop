@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroShop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">SeedShop</div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for products...">
+            <button onclick="searchProduct()">Search</button>
+        </div>
+        <div class="cart">
+            <a href="#cart">🛒 Cart (<span id="cart-count">0</span>)</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="product-grid" id="product-grid">
+            <!-- Products -->
+            <article class="product-card">
+                <img src="organic.png" alt="Fertilizer">
+                <h3>M-Tech Gardens Cow Dung Manure Chemical Free Best Organic Fertilizer Gobar Khad for All Plants (1, Kilograms) </h3>
+                <p>₹200</p>
+                <button onclick="addToCart('M-Tech Gardens Cow Dung Manure Chemical Free Best Organic Fertilizer Gobar Khad for All Plants (1, Kilograms)', 200)">Add to Cart</button>
+            </article>
+
+            <article class="product-card">
+                <img src="tomato.png" alt="Seeds">
+                <h3>Tomato Seeds.
+		Each pack contains approximately 100 - 150 seeds, suitable for planting in small to medium-sized gardens, ensuring a healthy and abundant crop of delicious tomatoes.</h3>
+                <p>₹100</p>
+                <button onclick="addToCart('Tomato Seeds', 100)">Add to Cart</button>
+            </article>
+
+            <article class="product-card">
+                <img src="hand trowel.png" alt="Tool">
+                <h3>Hand Trowel.
+		Digging Hand Trowel - Gardening Tool</h3>
+                <p>₹80</p>
+                <button onclick="addToCart('Hand Trowel', 80)">Add to Cart</button>
+            </article>
+
+            <article class="product-card">
+                <img src="pruning shears.png" alt="Pruning Shears">
+                <h3>Pruning Shears.
+		The Bahco P108-20-F are handy secateurs with a soft composite handle and a narrow jaw.</h3>
+                <p>₹120</p>
+                <button onclick="addToCart('Pruning Shears', 120)">Add to Cart</button>
+            </article>
+    <!-- Fertilizers -->
+    <article class="product-card">
+        <img src="paddy seeds.png" alt="Organic Fertilizer">
+        <h3>Paddy Seeds.
+	A Grade 100% Pure And Natural Organic Paddy Rice Seeds For Agriculture Use Admixture (%): 14%</h3>
+        <p>₹200</p>
+        <button onclick="addToCart('Paddy Seeds', 200)">Add to Cart</button>
+    </article>
+    <article class="product-card">
+        <img src="nitrogen fertilizer.png" alt="Nitrogen Fertilizer">
+        <h3>Nitrogen Fertilizer.
+	Organic Marine Nutrient - Nitrogen - Organic Fertilizer For Plants</h3>
+        <p>₹250</p>
+        <button onclick="addToCart('Nitrogen Fertilizer', 250)">Add to Cart</button>
+    </article>
+    <article class="product-card">
+        <img src="compost fertilizer.png" alt="Compost Fertilizer">
+        <h3>Compost Fertilizer.
+	Organic compost (Vermicomposting) is the scientific method of making compost, by using earthworms.</h3>
+        <p>₹150</p>
+        <button onclick="addToCart('Compost Fertilizer', 150)">Add to Cart</button>
+    </article>
+
+    <!-- Seeds -->
+    <article class="product-card">
+        <img src="chilli seeds.png" alt="Chilli Seeds">
+        <h3>Green Chilli Seeds.
+	You can harvest green chili after 70 to 80 days from transplanting.</h3>
+        <p>₹100</p>
+        <button onclick="addToCart('Chilli Seeds', 100)">Add to Cart</button>
+    </article>
+    <article class="product-card">
+        <img src="grapes.png" alt="Fruit Seeds">
+        <h3>Grapes Seeds
+	Herbal Engine Certified Grape Seeds Our Seeds are rich in antioxidants, essential nutrients, and polyphenols, (Black grape seeds 450g) </h3>
+        <p>₹150</p>
+        <button onclick="addToCart('Grapes Seeds', 150)">Add to Cart</button>
+    </article>
+    <article class="product-card">
+        <img src="sunflower.png" alt="SunFlower Seeds">
+        <h3>SunFlower Seeds.
+	Each packet contains 70 - 80 seeds, providing an excellent opportunity to grow charming miniature sunflowers that brighten up any garden or indoor space effortlessly.</h3>
+        <p>₹80</p>
+        <button onclick="addToCart('SunFlower Seeds', 80)">Add to Cart</button>
+    </article>
+
+    <!-- Tools -->
+    <article class="product-card">
+        <img src="onion.png" alt="Onion Seeds">
+        <h3>Onion Seeds.
+	You’ll receive approximately 40 - 50 seeds, ideal for planting in small to medium-sized garden beds or rows, ensuring a productive harvest.</h3>
+        <p>₹80</p>
+        <button onclick="addToCart('Onion Seeds', 80)">Add to Cart</button>
+    </article>
+    <article class="product-card">
+        <img src="neem seed.png" alt="Neem Seeds">
+        <h3>Neem Seeds.
+	Used for Avoids the growth of soil pest and bacteria Improves qoil quality Reduces need for extra fertilizer Increases flowers, fruits, vegetables, food grains productivity Balances soil, water,air relations of the plants</h3>
+        <p>₹120</p>
+        <button onclick="addToCart('Neem Seeds', 120)">Add to Cart</button>
+    </article>
+    <article class="product-card">
+        <img src="cotton seeds.png" alt="cotton seeds">
+        <h3>Cotton Seeds.
+	Cotton Seeds for Planting - 100% Natural Cotton Seeds - Premium Quality Cotton Seeds for Planting - White cotton Plant Seeds - Cotton for Planting in Patio, Lawn Garden (20) </h3>
+        <p>₹180</p>
+        <button onclick="addToCart('Cotton Seeds', 180)">Add to Cart</button>
+    </article>
+    <article class="product-card">
+        <img src="corn seeds.png" alt="makka">
+        <h3>Corn Seeds(Makka).
+	A NATURAL FARMING PRODUCT PRODUCED WITHOUT ANY CHEMICAL AND SYNTHETIC FERTILIZERS.</h3>
+        <p>₹220</p>
+        <button onclick="addToCart('Corn Seeds', 220)">Add to Cart</button>
+    </article>
+
+    <!-- Equipment -->
+    <article class="product-card">
+        <img src="carrot seeds.png" alt="Carrot Seeds">
+        <h3>Carrot Seeds.
+	Non GMO, No Trans-fats, cooking oils, No chemicals, preservatives, Colors, flavours, Nothing artificial added! </h3>
+        <p>₹150</p>
+        <button onclick="addToCart('Carrot Seeds', 150)">Add to Cart</button>
+    </article>
+    <article class="product-card">
+        <img src="beetroot.png" alt="Beetroot Seeds">
+        <h3>Beetroot Seeds
+	Also known as garden beet, which is a sweet, healthy vegetable loaded with antioxidants. Grows well in the temperature range of 10-30 °C.</h3>
+        <p>₹180</p>
+        <button onclick="addToCart('Beetroot Seeds', 180)">Add to Cart</button>
+    </article>
+    <article class="product-card">
+        <img src="watermelon.png" alt="Watermelon Seeds">
+        <h3>Watermelon Seeds.
+	Watermelon seeds are rich in nutrients that benefit general health and help with weight management</h3>
+        <p>₹200</p>
+        <button onclick="addToCart('Watermelon Seeds', 200)">Add to Cart</button>
+    </article>
+        </section>
+<section class="cart-section">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Price: ₹<span id="total-price">0</span></p>
+            <button onclick="proceedToPayment()">Proceed to Payment</button>
+		<!-- Payment Options Modal -->
+<div id="payment-modal" class="payment-modal">
+    <div class="payment-content">
+        <h2>Choose Your Payment Method</h2>
+        <p>Total Items: <span id="modal-total-items">0</span></p>
+        <p>Total Price: ₹<span id="modal-total-price">0</span></p>
+        <div class="payment-methods">
+            <h3>UPI Apps</h3>
+           <div class="upi-options">
+    <a id="gpay-link" href="#" target="_blank">
+        <img src="gpay.png" alt="Google Pay">
+    </a>
+    <a id="phonepe-link" href="#" target="_blank">
+        <img src="phonepay.png" alt="PhonePe">
+    </a>
+    <a id="paytm-link" href="#" target="_blank">
+        <img src="paytm.png" alt="Paytm">
+    </a>
+    <a id="bhim-link" href="#" target="_blank">
+        <img src="bhim.png" alt="BHIM">
+    </a>
+
+</div>
+
+            <h3>Card Payment</h3>
+            <div class="card-options">
+                <button onclick="alert('Paying via Credit Card')">Credit Card</button>
+                <button onclick="alert('Paying via Debit Card')">Debit Card</button>
+            </div>
+        </div>
+        <button class="close-modal" onclick="closePaymentModal()">Close</button>
+    </div>
+</div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 AgroShop. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
